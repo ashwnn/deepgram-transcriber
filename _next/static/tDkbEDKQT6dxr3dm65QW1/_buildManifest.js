@@ -3,8 +3,8 @@ self.__BUILD_MANIFEST = {
     "afterFiles": [],
     "beforeFiles": [
       {
-        "source": "/deepgram-mp3-transcriber//_next/:path+",
-        "destination": "/deepgram-mp3-transcriber/_next/:path+"
+        "source": "/deepgram-transcriber//_next/:path+",
+        "destination": "/deepgram-transcriber/_next/:path+"
       }
     ],
     "fallback": []
