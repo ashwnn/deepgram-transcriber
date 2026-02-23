@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/deepgram-mp3-transcriber//_next/:path+",
+        "destination": "/deepgram-mp3-transcriber/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
