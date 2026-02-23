@@ -4,6 +4,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   output: "export",
+  trailingSlash: true,
   basePath: isProd ? "/deepgram-transcriber" : "",
   assetPrefix: isProd ? "/deepgram-transcriber/" : "",
   images: {
