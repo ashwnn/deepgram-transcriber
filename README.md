@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Deepgram MP3 Transcriber 🎙️
 
-## Getting Started
+A sleek, serverless MP3 transcription suite powered by **Next.js**, **React**, and the **Deepgram API**. 
 
-First, run the development server:
+This application runs **100% in your browser** as a static HTML export. No backend is required, meaning your API Key and audio files are communicated directly from your browser to Deepgram's API securely without any middleman servers.
+
+## Features ✨
+
+*   **Serverless Architecture**: Pure client-side interactions via `fetch` to `api.deepgram.com`. Ready for GitHub Pages hosting out-of-the-box.
+*   **Minimalist Brutalist UI**: A beautiful, distraction-free environment allowing easy text review.
+*   **Advanced Audio Intelligence Settings**: Get full access to Deepgram's proprietary intelligence tooling natively via a custom UI accordion, avoiding complicated API requests. Included are **Summarization, Topics, Intents, Entities, and Sentiment Analysis**.
+*   **Deep Transcription Options**: Select Base and Fine-tuned models, configure **Speaker Diarization**, find and replace keywords, filter profanity, apply redactions, use Smart Formatting, and more.
+*   **Batch Markdown Export (.md)**: Transcribe multiple files, view their intelligent metadata, and save perfectly aligned Markdown outputs with a single click.
+
+## Technology Stack 💻
+
+- **Framework**: Next.js 15 (App Router enabled with `output: 'export'`)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: lucide-react
+
+---
+
+## Getting Started 🚀
+
+### Local Development
+
+1. Clone the repository and install dependencies using `bun` (or `npm`/`yarn`):
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Start the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+*Note: No `.env` variables are required! You will supply your API Key securely in the UI, which will be safely saved into your browser's local storage.*
 
-To learn more about Next.js, take a look at the following resources:
+### Deploying to GitHub Pages 🌍
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is already pre-configured for **GitHub Pages generation**. Simply use the included deployment scripts:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repository and install dependencies.
+2. Run the deployment script to push the static `/out` directory to your `gh-pages` branch seamlessly:
 
-## Deploy on Vercel
+```bash
+bun run deploy
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Head over to **Settings -> Pages** in your GitHub repository and ensure the source branch is set to `gh-pages`. In a few minutes, your site will be live!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## How It Works ⚙️
+1. Input your Deepgram API Key (It is saved using local storage).
+2. Configure **Advanced Settings** based on what metadata you require.
+3. Drag & Drop an MP3 file (or click the dashed box). 
+4. Deepgram's Nova-3 (or whichever model you select) will transcribe the file via direct post requests.
+5. Export your summary, topics, and transcribed results to Markdown.
