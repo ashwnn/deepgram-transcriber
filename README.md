@@ -1,64 +1,48 @@
-# Deepgram MP3 Transcriber 🎙️
+# Deepgram MP3 Transcriber
 
-A sleek, serverless MP3 transcription suite powered by **Next.js**, **React**, and the **Deepgram API**. 
+A serverless MP3 transcription tool powered by Next.js and the Deepgram API. Runs entirely in your browser with no backend required.
 
-This application runs **100% in your browser** as a static HTML export. No backend is required, meaning your API Key and audio files are communicated directly from your browser to Deepgram's API securely without any middleman servers.
+## Features
 
-## Features ✨
+- Serverless architecture: direct browser fetch to Deepgram API, no middleman server
+- Minimalist UI
+- Audio Intelligence: Summarization, Topics, Intents, Entity Detection, Sentiment Analysis
+- Transcription options: Diarization, Smart Format, Punctuation, Utterances, Redaction, and more
+- Export transcription results as Markdown
+- Supports files up to 100MB via chunked streaming
 
-*   **Serverless Architecture**: Pure client-side interactions via `fetch` to `api.deepgram.com`. Ready for GitHub Pages hosting out-of-the-box.
-*   **Minimalist Brutalist UI**: A beautiful, distraction-free environment allowing easy text review.
-*   **Advanced Audio Intelligence Settings**: Get full access to Deepgram's proprietary intelligence tooling natively via a custom UI accordion, avoiding complicated API requests. Included are **Summarization, Topics, Intents, Entities, and Sentiment Analysis**.
-*   **Deep Transcription Options**: Select Base and Fine-tuned models, configure **Speaker Diarization**, find and replace keywords, filter profanity, apply redactions, use Smart Formatting, and more.
-*   **Batch Markdown Export (.md)**: Transcribe multiple files, view their intelligent metadata, and save perfectly aligned Markdown outputs with a single click.
+## Tech Stack
 
-## Technology Stack 💻
+- Next.js 15 (static export)
+- TypeScript
+- Tailwind CSS
 
-- **Framework**: Next.js 15 (App Router enabled with `output: 'export'`)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Icons**: lucide-react
+## Getting Started
 
----
-
-## Getting Started 🚀
-
-### Local Development
-
-1. Clone the repository and install dependencies using `bun` (or `npm`/`yarn`):
+Install dependencies:
 
 ```bash
 bun install
 ```
 
-2. Start the development server:
+Run locally:
 
 ```bash
 bun run dev
 ```
 
-3. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000). No `.env` file needed. Enter your Deepgram API key directly in the UI.
 
-*Note: No `.env` variables are required! You will supply your API Key securely in the UI, which will be safely saved into your browser's local storage.*
+## GitHub Pages Deployment
 
-### Deploying to GitHub Pages 🌍
-
-This project is already pre-configured for **GitHub Pages generation**. Simply use the included deployment scripts:
-
-1. Clone the repository and install dependencies.
-2. Run the deployment script to push the static `/out` directory to your `gh-pages` branch seamlessly:
+Build and deploy to the `gh-pages` branch:
 
 ```bash
 bun run deploy
 ```
 
-3. Head over to **Settings -> Pages** in your GitHub repository and ensure the source branch is set to `gh-pages`. In a few minutes, your site will be live!
+Then go to your repo's Settings > Pages and set the source branch to `gh-pages`.
 
----
+## License
 
-## How It Works ⚙️
-1. Input your Deepgram API Key (It is saved using local storage).
-2. Configure **Advanced Settings** based on what metadata you require.
-3. Drag & Drop an MP3 file (or click the dashed box). 
-4. Deepgram's Nova-3 (or whichever model you select) will transcribe the file via direct post requests.
-5. Export your summary, topics, and transcribed results to Markdown.
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
