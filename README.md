@@ -46,3 +46,5 @@ Then go to your repo's Settings > Pages and set the source branch to `gh-pages`.
 ## License
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+> NOTE: AI tools (Kimi 2.5 and GPT-5.3 Codex) were used to assist with implementation.
